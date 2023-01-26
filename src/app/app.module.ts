@@ -2,13 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/base/header/header.component';
+import { LayoutComponent } from './components/base/layout/layout.component';
+import { FooterComponent } from './components/base/footer/footer.component';
+import { HeroComponent } from './components/main/hero/hero.component';
+import { AboutComponent } from './components/main/about/about.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ServicesComponent } from './components/main/services/services.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    LayoutComponent,
+    FooterComponent,
+    HeroComponent,
+    AboutComponent,
+    ServicesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

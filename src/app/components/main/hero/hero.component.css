@@ -1,0 +1,43 @@
+#hero .learnMore {
+  border: 2px solid #3498db;
+  text-align: center;
+  /* background-color: #3498db; */
+  color: #3498db;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 20px;
+}
+
+#hero .learnMore:hover {
+  border: 2px solid #3498db;
+  background-color: #3498db;
+  color: white;
+  font-size: 20px;
+}
+
+#hero h1{
+  font-size: 48px;
+  font-weight: 700;
+
+}
+
+#hero h4{
+  color: #484848;
+}
+
+#hero a.learnMore{
+  color: #3498db; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 992px) {
+  #hero #hero-image{
+    width: 80%;
+  }
+}

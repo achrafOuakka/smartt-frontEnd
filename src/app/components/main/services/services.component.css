@@ -1,0 +1,48 @@
+#services .title-section h2{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+
+#services .title-section h2::before, #services .title-section h2::after {
+  content: '';
+  width: 50px;
+  height: 2.5px;
+  background: #3498db;
+  display: inline-block;
+  margin: 10px;
+}
+
+#services .fa.icon{
+font-size: 30px;
+background: #3498db;
+color: white;
+padding: 14px;
+border-radius: 50px;
+}
+
+
+#services .card-group p{
+  line-height: 28px;
+  font-size: 16px;
+}
+
+#services .card{
+  box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+
+#services .card:hover{
+  color: white;
+  background-color: #3498db;
+}
+
+#services .card:hover .fa.icon{
+  color: #3498db;
+  background: white;
+}
+

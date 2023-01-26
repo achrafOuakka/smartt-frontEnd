@@ -1,0 +1,53 @@
+#about .title-section h2{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+
+#about .title-section h2::before, #about .title-section h2::after {
+  content: '';
+  width: 50px;
+  height: 2.5px;
+  background: #3498db;
+  display: inline-block;
+  margin: 10px;
+}
+
+#about  p{
+  line-height: 28px;
+  font-size: 16px;
+}
+
+#about .content ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+#about .content ul li {
+  margin-top: 10px;
+  padding-left: 28px;
+}
+
+#about .content ul i {
+color: #3498db;
+}
+
+#about .learnMore {
+  border: 2px solid #3498db;
+  text-align: center;
+  /* background-color: #3498db; */
+  color: #3498db;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 20px;
+}
+
+#about .learnMore:hover {
+  border: 2px solid #3498db;
+  background-color: #3498db;
+  color: white;
+  font-size: 20px;
+}
+
+
