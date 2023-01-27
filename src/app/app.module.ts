@@ -12,6 +12,7 @@ import { ServicesComponent } from './components/main/services/services.component
 import { ContactComponent } from './components/main/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ScrollComponent } from './components/base/scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,

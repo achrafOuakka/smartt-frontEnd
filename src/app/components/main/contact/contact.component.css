@@ -55,3 +55,16 @@
 
 }
 
+#contact .map{
+  width:100%;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+
+#contact .gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+}

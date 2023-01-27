@@ -20,6 +20,14 @@
   padding: 10px 20px;
   border-radius: 25px
 }
+#header .navbar-light .navbar-nav .nav-link.learnMore.active,
+#header  .navbar-light .navbar-nav .show>.nav-link.learnMore,
+#header .navbar-light .navbar-nav .nav-link.learnMore:focus,
+#header  .navbar-light .navbar-nav .nav-link.learnMore:hover {
+  color: white;
+  background-color: #308ecd;
+}
+
 
 #header .navbar-light .navbar-nav .nav-link{
   margin-left: 5px ;
