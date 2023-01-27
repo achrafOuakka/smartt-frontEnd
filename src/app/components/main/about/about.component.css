@@ -1,3 +1,8 @@
+#about{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 #about .title-section h2{
   font-weight: bold;
   text-transform: uppercase;

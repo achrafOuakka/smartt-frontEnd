@@ -1,3 +1,8 @@
+#hero{
+  padding-top: 100px;
+  padding-bottom: 10px;
+  /* height: 70vh; */
+}
 #hero .learnMore {
   border: 2px solid #3498db;
   text-align: center;

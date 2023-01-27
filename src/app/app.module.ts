@@ -9,6 +9,9 @@ import { HeroComponent } from './components/main/hero/hero.component';
 import { AboutComponent } from './components/main/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServicesComponent } from './components/main/services/services.component';
+import { ContactComponent } from './components/main/contact/contact.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,15 @@ import { ServicesComponent } from './components/main/services/services.component
     FooterComponent,
     HeroComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,//pour ngForms
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
