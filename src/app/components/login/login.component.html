@@ -1,31 +1,53 @@
 <!-- Start Login Section -->
-<div class="contient " id="dis">
-  <div dir="{{ currentLang == 'ar' ? 'rtl' : 'ltr' }}" [ngClass]="{' i18n-ar ' : currentLang == 'ar' }">
-    <div class="vh-100 ">
-      <!-- d-flex justify-content-center align-items-center -->
-      <div class="row h-100 m-0 ">
-        <div class="col-sm-4 col-12 bg-white h-100  m-0 p-0 d-flex align-items-center">
-          <div class=" card border-0 w-100  p-0 rounded-0 ">
-            <div class="card-body py-1 px-3  text-center">
-              <div class="pb-5">
-                <img src="./assets/images/logo-001.png" role="button" [routerLink]="['/']"
-                  class="mb-3 ministry-logo  ">
-              </div>
-              <!-- <img src="./assets/images/logo-001.png" role="button" [routerLink]="['/']" class="my-3 logo rounded-circle shadow text-center" > -->
-              <h4 class="card-title d-flex justify-content-center text-center" role="button" [routerLink]="['/']">Distinktec Consulting</h4>
-              <!-- ÉCOLE 2<span class="card-sub-title mr-1" >éme</span> CHANCE -->
-              <p class="card-text text-center">Connectez-vous pour continuer</p>
-              <!-- Start form -->
-              <form [formGroup]="formLogin" (ngSubmit)="onFormSubmit(formLogin)" [ngClass]="{' i18n-ar ' : currentLang == 'ar' }">
+<div id="login">
 
-                <!-- Start message error -->
-                <div class="alert alert-danger msgError" *ngIf="messageError">{{messageError}}</div>
-                <!-- End message error-->
+  <div class="container-sm-fluid" id="dis">
+    <div class="vh-100">
+      <nav class="navbar mb-5 navbar-expand-lg navbar-light bg-light px-sm-3 px-0">
+        <a class="navbar-brand logo" href="#">
+          <img src="./assets/images/logo-001.png" alt="logo" role="button" [routerLink]="['/']" class="header-logo">
+        </a>
 
-                <!-- Start login input-->
-                <div class="form-group">
-                  <label class="col-form-label d-block" [ngClass]="currentLang == 'ar' ? ' text-right ' : ' text-left ' " for="login">Nom d'utilisateur : </label>
-                  <input dir="ltr" type="text" class="form-control"  id="login" formControlName="username" name="username" required >
+        <div class="navbar ml-auto" >
+        <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link btn-signup" href="#">S'inscrire</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div class="collapse navbar-collapse" >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">S'inscrire</a>
+            </li>
+          </ul>
+        </div> -->
+      </nav>
+      <div class=" main h-75 px-sm-3 px-2 d-flex align-items-center justify-content-center">
+        <div class="main-bg"  ></div>
+        <div class=" card  w-sm-50 bg-white  shadow rounded-lg ">
+          <div class="card-body py-4 px-sm-5  text-center">
+            <!-- <img src="./assets/images/logo-001.png" role="button" [routerLink]="['/']" class="my-3 logo rounded-circle shadow text-center" > -->
+            <h3 class="card-title d-flex justify-content-center text-center mb-5" role="button" [routerLink]="['/']">Connectez-vous pour continuer</h3>
+            <!-- Start form -->
+            <form [formGroup]="formLogin" (ngSubmit)="onFormSubmit(formLogin)" >
+
+              <!-- Start message error -->
+              <div class="alert alert-danger msgError" *ngIf="messageError">{{messageError}}</div>
+              <!-- End message error-->
+
+              <!-- Start login input-->
+              <div class="py-2">
+                <label class="col-form-label d-block " >Nom d'utilisateur : </label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupLogin">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <input dir="ltr" type="text" class="form-control"  id="login" formControlName="username" name="username" aria-describedby="inputGroupLogin" required >
+                </div>
                   <!-- placeholder="{{'input-username-label' + 'translate'}}" -->
                   <section  *ngIf="(isSubmitLogin && formLogin.get('username')?.errors) || (formLogin.get('username')?.invalid && ( formLogin.get('username')?.dirty || formLogin.get('username')?.touched))">
                     <div class="invalid-feedback d-block " *ngIf="formLogin.get('username')?.errors?.required ">
@@ -34,43 +56,43 @@
                   </section>
                 </div>
 
-                <!-- Start password input-->
-                <div class="form-group">
-                  <label class="col-form-label d-block"  [ngClass]="currentLang == 'ar' ? ' text-right ' : ' text-left ' " for="password">Entrer le mot de passe : </label>
-                    <input dir="ltr" type="password" class="form-control" id="password" formControlName="password" name="password" required >
+
+              <!-- Start password input-->
+              <div class="py-2">
+                <label class="col-form-label d-block"  >Entrer le mot de passe : </label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPWD">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <input dir="ltr" type="password" class="form-control" id="password" formControlName="password" name="password" aria-describedby="inputGroupPWD" required >
+                  </div>
                     <!-- Entrer le mot de passe -->
                     <section *ngIf="(isSubmitLogin && formLogin.get('password')?.errors) || (formLogin.get('password')?.invalid && ( formLogin.get('password')?.dirty || formLogin.get('password')?.touched))">
                       <div class="invalid-feedback d-block" *ngIf="formLogin.get('password')?.errors?.required ">
                         <i class="fa fa-exclamation-triangle" ></i> {{"validation-password-required" + 'translate'}}
                       </div>
                     </section>
-                  </div>
-                  <div>
-                    <a href="javascript: void(0);" [routerLink]="['/forgot-password']" class="title-forgot-password d-flex justify-content-start">Mot de passe oublié ?</a>
-                  </div>
-                <button type="submit" class="btn btn-primary  p-2 my-3 w-100" [disabled]="formLogin.invalid">
-                  <i class="fa fa-unlock" aria-hidden="true"></i> Connexion</button>
-              </form>
-              <!-- End form -->
-              <div>
-                <a href="javascript: void(0);" [routerLink]="['/sign-up']" class="title-inscrit d-flex justify-content-center">Pas encore inscrit ?</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-sm-8 m-0 p-0 d-flex justify-content-center align-items-center ">
-          <div class=" px-3  d-sm-block d-none">
-            <h1 class="pb-3 title-rigth"> Bienvenue dans votre espace privé</h1>
-            <p class="text-rigth text-center">Un système d'information intégré pour mieux communiquer.</p>
-            <div class="mt-5 pt-2">
-              <img src="./assets/images/hero-002.png" role="button" [routerLink]="['/']" class=" school-img  ">
-            </div>
-          </div>
 
+                </div>
+                <div>
+                  <a href="javascript: void(0);" [routerLink]="['/forgot-password']" class="title-forgot-password d-flex justify-content-start">Mot de passe oublié ?</a>
+                </div>
+              <button type="submit" class="btn-submit  p-2 my-3 w-100" [disabled]="formLogin.invalid">
+                <i class="fa fa-unlock" aria-hidden="true"></i> Connexion</button>
+            </form>
+            <!-- End form -->
+            <div class="title-inscrit d-flex justify-content-center">
+              Vous n'avez pas de compte ? <a href="javascript: void(0);" class="ml-2 lien-signup" [routerLink]="['/sign-up']" > S'inscrire</a>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
+
+
   </div>
 </div>
+
 <!-- End Login Section -->

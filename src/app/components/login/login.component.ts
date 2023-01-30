@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   isSubmitLogin = false;
   messageError: string = "";
-  currentLang : string = "";
 
   /********************************************************************************************/
   /************************************* Initialization functions  ****************************/
