@@ -1,15 +1,16 @@
-#scroll-top .back-to-top {
+#scroll .scroll-to-top {
   position: fixed;
   display: none;
   right: 5px;
   bottom: 5px;
   z-index: 99999;
-  transform: translate(-50%, -50%);
   cursor: pointer;
+  /* and a transition */
+  transition: 1s;
 }
 
-
-#scroll-top .back-to-top i {
+/* style scroll */
+#scroll .scroll-to-top i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,8 +23,7 @@
   transition: all 0.4s;
 }
 
-#scroll-top .show-scrollTop {
+#scroll .show {
   display: block;
-  opacity: 1;
-  transition: all 0.2s ease-in-out;
+
 }

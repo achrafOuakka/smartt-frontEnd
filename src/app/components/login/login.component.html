@@ -1,7 +1,7 @@
 <!-- Start Login Section -->
 <div id="login">
 
-  <div class="container-sm-fluid" id="dis">
+  <div class="container-sm-fluid" >
     <div class="vh-100">
       <nav class="navbar mb-5 navbar-expand-lg navbar-light bg-light px-sm-3 px-0">
         <a class="navbar-brand logo" href="#">
@@ -29,7 +29,7 @@
         <div class=" card  w-sm-50 bg-white  shadow rounded-lg ">
           <div class="card-body py-4 px-sm-5  text-center">
             <!-- <img src="./assets/images/logo-001.png" role="button" [routerLink]="['/']" class="my-3 logo rounded-circle shadow text-center" > -->
-            <h3 class="card-title d-flex justify-content-center text-center mb-5" role="button" [routerLink]="['/']">Connectez-vous pour continuer</h3>
+            <h3 class="card-title d-flex justify-content-center text-center mb-4" role="button" [routerLink]="['/']">Connectez-vous pour continuer</h3>
             <!-- Start form -->
             <form [formGroup]="formLogin" (ngSubmit)="onFormSubmit(formLogin)" >
 
@@ -46,7 +46,7 @@
                       <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     </span>
                   </div>
-                  <input dir="ltr" type="text" class="form-control"  id="login" formControlName="username" name="username" aria-describedby="inputGroupLogin" required >
+                  <input  type="text" class="form-control"  id="login" formControlName="username" name="username" placeholder="Saisir votre adresse e-mail ou Nom d'utilisateur" aria-describedby="inputGroupLogin"  required >
                 </div>
                   <!-- placeholder="{{'input-username-label' + 'translate'}}" -->
                   <section  *ngIf="(isSubmitLogin && formLogin.get('username')?.errors) || (formLogin.get('username')?.invalid && ( formLogin.get('username')?.dirty || formLogin.get('username')?.touched))">
@@ -66,7 +66,12 @@
                         <i class="fa fa-lock" aria-hidden="true"></i>
                       </span>
                     </div>
-                    <input dir="ltr" type="password" class="form-control" id="password" formControlName="password" name="password" aria-describedby="inputGroupPWD" required >
+                    <input  type="password" class="form-control" id="password" formControlName="password" name="password" placeholder="Saisir votre mot de passe" aria-describedby="inputGroupPWD" required >
+                    <div class="input-group-prepend ">
+                      <span class="input-group-text " id="inputGroupPWD">
+                        <a href="javascript: void(0);" [routerLink]="['/forgot-password']" class="title-forgot-password">Mot de passe oublié ?</a>
+                      </span>
+                    </div>
                   </div>
                     <!-- Entrer le mot de passe -->
                     <section *ngIf="(isSubmitLogin && formLogin.get('password')?.errors) || (formLogin.get('password')?.invalid && ( formLogin.get('password')?.dirty || formLogin.get('password')?.touched))">
@@ -76,10 +81,8 @@
                     </section>
 
                 </div>
-                <div>
-                  <a href="javascript: void(0);" [routerLink]="['/forgot-password']" class="title-forgot-password d-flex justify-content-start">Mot de passe oublié ?</a>
-                </div>
-              <button type="submit" class="btn-submit  p-2 my-3 w-100" [disabled]="formLogin.invalid">
+
+              <button type="submit" class="btn-submit  p-2 my-4 w-100" [disabled]="formLogin.invalid">
                 <i class="fa fa-unlock" aria-hidden="true"></i> Connexion</button>
             </form>
             <!-- End form -->

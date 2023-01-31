@@ -10,6 +10,10 @@
 
 #login .main .col-form-label{
   text-align: start;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 11px;
+  padding: 0 0 8px 2px;
 }
 
 
@@ -97,39 +101,19 @@
 
 #login .lien-signup{
   color: #3498db;
-}
-/*--------- start contient ---------*/
-img.logo{
-
-  width: 85px;
-  height: auto;
+  border-bottom: 1px dashed transparent;
 }
 
-img.ministry-logo{
-
-  width: 100%;
-  height: auto;
+#login .main a.lien-signup:hover {
+  text-decoration: revert;
 }
 
-img.school-img{
-  width: 100%;
-  height: 400px;
+#login .main .rounded-lg{
+  border-radius: 1rem!important;
 }
-
-.login-rigth{
-  background: #eef0f86b;/* #F3F6F9; */
-  color: var(--third-color-dis);
-}
-
 
 .card-title{
   color: var(--third-color-dis);
-}
-
-
-.card-sub-title{
-  line-height: 10px;
-  font-size: 0.7rem;
 }
 
 .title-forgot-password,.title-inscrit{
@@ -137,73 +121,22 @@ img.school-img{
 }
 
 
-
-
-@media (min-width: 576px)
-{
-  .col-sm-4 {
-      flex: 0 0 40%;
-      max-width: 40%;
-  }
-  .col-sm-8 {
-      flex: 0 0 60%;
-      max-width: 60%;
-  }
-}
-
 .msgError{
   font-size: small;
   padding: 3px;
 }
+
+#login .main .input-group .title-forgot-password {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3498db;
+  right: 0;
+  border-bottom: 1px dashed transparent;
+}
+
+#login .main .input-group .title-forgot-password:hover {
+  border-bottom-color: #3498db;
+}
+
 /* end login section */
 
-
-/*------------------- i18n-arabe -----------------------*/
-/* .i18n-arb */
-.title-rigth{
-color: var(--main-color-dis);
-}
-
-.i18n-ar .title-rigth {
-font-size: xxx-large;
-}
-
-.text-rigth{
-color: var(--third-color-dis);
-}
-
-.i18n-ar .text-rigth {
-font-size: x-large;
-}
-
-.navLang ul li {
-font-size: 0.8rem;
-line-height: 1rem;
-text-transform: uppercase;
-display: inline-block;
-vertical-align: middle;
-}
-
-.i18n-ar .navLang ul li {
-font-size: 1rem;
-}
-.navLang ul li:last-child:before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-height: 1rem;
-width: .5px;
-background: #abb5ce;
-margin: .5rem;
-}
-
-.navLang ul li span {
-display: inline-block;
-vertical-align: middle;
-color: #abb5ce;
-}
-
-.navLang ul li span.currentLang {
-font-weight: 700;
-color: var(--main-color-dis);
-}
