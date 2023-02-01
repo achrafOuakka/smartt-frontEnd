@@ -9,6 +9,6 @@
 
 #footer .navbar .item:focus,
 #footer .navbar .item:hover {
-  color: #3498db;
+  color: var(--main-color-dis);
 }
 

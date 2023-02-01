@@ -14,14 +14,14 @@
   content: '';
   width: 50px;
   height: 2.5px;
-  background: #3498db;
+  background: var(--main-color-dis);
   display: inline-block;
   margin: 10px;
 }
 
 #services .fa.icon{
 font-size: 30px;
-background: #3498db;
+background: var(--main-color-dis);
 color: white;
 padding: 10px 13px;
 border-radius: 50px;
@@ -59,7 +59,7 @@ border-radius: 50px;
 }
 
 #services .card:hover::before {
-  background-color: #3498db;
+  background-color: var(--main-color-dis);
   color: white !important;
   right: 0;
   top: 0;
@@ -71,7 +71,7 @@ border-radius: 50px;
 
 
 #services .card:hover .fa.icon{
-  color: #3498db;
+  color: var(--main-color-dis);
   background: white;
 }
 

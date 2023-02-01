@@ -18,7 +18,7 @@
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #3498db;
+  background: var(--main-color-dis);
   color: #fff;
   transition: all 0.4s;
 }

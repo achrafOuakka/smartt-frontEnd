@@ -14,7 +14,7 @@
   content: '';
   width: 50px;
   height: 2.5px;
-  background: #3498db;
+  background: var(--main-color-dis);
   display: inline-block;
   margin: 10px;
 }
@@ -35,22 +35,22 @@
 }
 
 #about .content ul i {
-color: #3498db;
+color: var(--main-color-dis);
 }
 
 #about .learnMore {
-  border: 2px solid #3498db;
+  border: 2px solid var(--main-color-dis);
   text-align: center;
-  /* background-color: #3498db; */
-  color: #3498db;
+  /* background-color: var(--main-color-dis); */
+  color: var(--main-color-dis);
   padding: 10px 25px;
   border-radius: 25px;
   font-size: 20px;
 }
 
 #about .learnMore:hover {
-  border: 2px solid #3498db;
-  background-color: #3498db;
+  border: 2px solid var(--main-color-dis);
+  background-color: var(--main-color-dis);
   color: white;
   font-size: 20px;
 }

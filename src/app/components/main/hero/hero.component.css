@@ -4,18 +4,18 @@
   /* height: 70vh; */
 }
 #hero .learnMore {
-  border: 2px solid #3498db;
+  border: 2px solid var(--main-color-dis);
   text-align: center;
-  /* background-color: #3498db; */
-  color: #3498db;
+  /* background-color: var(--main-color-dis); */
+  color: var(--main-color-dis);
   padding: 10px 25px;
   border-radius: 25px;
   font-size: 20px;
 }
 
 #hero .learnMore:hover {
-  border: 2px solid #3498db;
-  background-color: #3498db;
+  border: 2px solid var(--main-color-dis);
+  background-color: var(--main-color-dis);
   color: white;
   font-size: 20px;
 }
@@ -31,7 +31,7 @@
 }
 
 #hero a.learnMore{
-  color: #3498db; /* blue colors for links too */
+  color: var(--main-color-dis); /* blue colors for links too */
   text-decoration: inherit; /* no underline */
 }
 

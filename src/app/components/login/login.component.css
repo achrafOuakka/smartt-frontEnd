@@ -81,7 +81,7 @@
 
 #login  .navbar .navbar-nav .btn-signup,
 #login .main button.btn-submit{
-  background-color: #3498db;
+  background-color: var(--main-color-dis);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
@@ -100,7 +100,7 @@
 }
 
 #login .lien-signup{
-  color: #3498db;
+  color: var(--main-color-dis);
   border-bottom: 1px dashed transparent;
 }
 
@@ -129,13 +129,13 @@
 #login .main .input-group .title-forgot-password {
   font-size: 12px;
   font-weight: 500;
-  color: #3498db;
+  color: var(--main-color-dis);
   right: 0;
   border-bottom: 1px dashed transparent;
 }
 
 #login .main .input-group .title-forgot-password:hover {
-  border-bottom-color: #3498db;
+  border-bottom-color: var(--main-color-dis);
 }
 
 /* end login section */
