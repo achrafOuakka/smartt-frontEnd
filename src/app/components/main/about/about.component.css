@@ -24,17 +24,17 @@
   font-size: 16px;
 }
 
-#about .content ul {
+#about .content-first ul {
   list-style-type: none;
   padding-left: 0px;
 }
 
-#about .content ul li {
+#about .content-first ul li {
   margin-top: 10px;
   padding-left: 28px;
 }
 
-#about .content ul i {
+#about .content-first ul i {
 color: var(--main-color-dis);
 }
 
@@ -53,6 +53,12 @@ color: var(--main-color-dis);
   background-color: var(--main-color-dis);
   color: white;
   font-size: 20px;
+}
+
+
+#about .content-second .about-second-icon {
+  font-size: 2.5em;
+  color: var(--main-color-dis);
 }
 
 

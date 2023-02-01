@@ -28,12 +28,12 @@ border-radius: 50px;
 }
 
 
-#services .card-group p{
+#services .content-first .card-group p{
   line-height: 28px;
   font-size: 16px;
 }
 
-#services .card{
+#services .content-first .card{
   box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -41,7 +41,7 @@ border-radius: 50px;
   overflow: hidden;
 }
 
-#services .card::before {
+#services .content-first .card::before {
   content: '';
   position: absolute;
   background: #e1f0fa;
@@ -54,11 +54,11 @@ border-radius: 50px;
   z-index: -1;
 }
 
-#services .card:hover{
+#services .content-first .card:hover{
   color: white;
 }
 
-#services .card:hover::before {
+#services .content-first .card:hover::before {
   background-color: var(--main-color-dis);
   color: white !important;
   right: 0;
@@ -70,8 +70,41 @@ border-radius: 50px;
 
 
 
-#services .card:hover .fa.icon{
+#services .content-first .card:hover .fa.icon{
   color: var(--main-color-dis);
   background: white;
 }
 
+
+#services .content-second .card {
+  border: 0;
+  padding: 160px 20px 20px 20px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#services .content-second .card .card-body{
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 5px;
+}
+
+
+#services .content-second .card:hover .card-body{
+  background: var(--main-color-dis);
+  color: white;
+  transition: 0.3s;
+  transition: ease-in-out 0.4s;
+}
+
+#services .content-second .card:hover .card-text,
+#services .content-second .card:hover .card-title,
+#services .content-second .card:hover .read-more a{
+  color: white !important;
+  transition: 0.25s;
+  transition: ease-in-out 0.35s;
+}
