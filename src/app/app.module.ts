@@ -13,6 +13,7 @@ import { ContactComponent } from './components/main/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollComponent } from './components/base/scroll/scroll.component';
+import { FeaturesComponent } from './components/main/features/features.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ScrollComponent } from './components/base/scroll/scroll.component';
     ServicesComponent,
     ContactComponent,
     LoginComponent,
-    ScrollComponent
+    ScrollComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
