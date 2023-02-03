@@ -6,7 +6,27 @@
         <p class="mt-3 mb-4 h6 text-muted">Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
       </div>
       <div class="content-first pb-5">
-
+        <div class="row">
+          <ng-container *ngFor="let item of listPortfolio">
+            <div class="col-lg-4 col-md-6 ">
+              <div class="portfolio-item my-3">
+                <img class="portfolio-img img-fluid"  src="./assets/images/{{item.img}}">
+                <div class="portfolio-info">
+                  <h4>{{item.title}}</h4>
+                  <p class="text-uppercase">{{item.category}}</p>
+                  <div class="portfolio-links">
+                    <a href="./assets/images/{{item.img}}" title="{{item.title}}">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
       </div>
     </div>
   </div>
