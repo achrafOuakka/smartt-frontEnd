@@ -17,6 +17,8 @@ import { FeaturesComponent } from './components/main/features/features.component
 import { TestimonialsComponent } from './components/main/testimonials/testimonials.component';
 import { TeamComponent } from './components/main/team/team.component';
 import { PortfolioComponent } from './components/main/portfolio/portfolio.component';
+import { PricingComponent } from './components/main/pricing/pricing.component';
+import { FaqComponent } from './components/main/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PortfolioComponent } from './components/main/portfolio/portfolio.compon
     FeaturesComponent,
     TestimonialsComponent,
     TeamComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    PricingComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

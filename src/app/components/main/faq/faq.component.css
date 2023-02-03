@@ -1,0 +1,44 @@
+#faq{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#faq .title-section h2{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+
+#faq .title-section h2::before, #faq .title-section h2::after {
+  content: '';
+  width: 50px;
+  height: 2.5px;
+  background: var(--main-color-dis);
+  display: inline-block;
+  margin: 10px;
+}
+
+#faq .content-first .question-item{
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#faq .content-first .question-item h5 {
+  line-height: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#faq .content-first .question-item .col-lg-5 i{
+  font-size: 1.55em;
+  line-height: 1;
+  color: var(--main-color-dis);
+}
+
+
+#faq .content-first .question-item  p {
+  font-size: 17px;
+  line-height: 26px;
+  color: #444444;
+}

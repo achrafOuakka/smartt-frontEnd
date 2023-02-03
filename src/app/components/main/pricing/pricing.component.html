@@ -1,0 +1,35 @@
+<div id="pricing">
+  <div class="container-lg container-fluid ">
+    <div class="text-center animate__animated animate__fadeInUp animate__slower">
+      <div class="title-section">
+        <h2 class="text-uppercase">PRICING</h2>
+        <p class="mt-3 mb-4 h6 text-muted">
+          Sit sint consectetur velit nemo qui impedit suscipit alias ea
+        </p>
+      </div>
+      <div class="content-first ">
+        <div class="row">
+          <ng-container *ngFor="let item of listPricing,let index = index">
+            <div class="col-lg-4">
+              <div class="box " [ngClass]="index == 1 ? 'recommended':''">
+                <h3>{{item.title}}</h3>
+                <h4>
+                  <sup>$</sup>{{item.prix}} <span>/month</span>
+                </h4>
+                <ul>
+                  <ng-container *ngFor="let itemPItems of listPricingItems,let indexItem = index">
+                    <li [ngClass]="(item.li_no.indexOf(indexItem) > -1) ? 'no':''">{{itemPItems}}</li>
+                  </ng-container>
+                </ul>
+                <div class="btn">
+                  <a class="btn-buy" href="#">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

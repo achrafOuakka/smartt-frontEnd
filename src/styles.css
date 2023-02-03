@@ -74,7 +74,7 @@ a {
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1350px;
+    max-width: 1425px; /*1350px;*/
 }
  }
 

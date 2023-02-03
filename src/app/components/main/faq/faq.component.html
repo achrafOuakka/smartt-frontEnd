@@ -1,0 +1,29 @@
+<div id="faq">
+  <div class="container-lg container-fluid ">
+    <div class="text-center animate__animated animate__fadeInUp animate__slower">
+      <div class="title-section pb-5">
+        <h2 class="text-uppercase">FREQUENTLY ASKED QUESTIONS</h2>
+      </div>
+      <div class="content-first text-left">
+        <ng-container *ngFor="let item of listFaq">
+          <div class="row question-item ">
+            <div class="col-lg-5">
+              <div class="row ">
+                <div class="col-1  px-0 text-center">
+                  <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="col-11 px-0">
+                  <h5>{{item.question}}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <p>{{item.answer}}</p>
+            </div>
+          </div>
+        </ng-container>
+
+      </div>
+    </div>
+  </div>
+</div>
