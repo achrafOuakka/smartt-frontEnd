@@ -1,0 +1,129 @@
+#team{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#team .title-section h2{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+
+#team .title-section h2::before, #team .title-section h2::after {
+  content: '';
+  width: 50px;
+  height: 2.5px;
+  background: var(--main-color-dis);
+  display: inline-block;
+  margin: 10px;
+}
+
+#team .fa.icon{
+font-size: 30px;
+background: var(--main-color-dis);
+color: white;
+padding: 10px 13px;
+border-radius: 50px;
+}
+
+
+#team .content-first .card-group p{
+  line-height: 28px;
+  font-size: 16px;
+}
+
+ #team .content-first .card{
+  box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#team .content-first .card-body .card-title{
+  font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #222222;
+}
+
+#team .content-first .card-body .card-text{
+  display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaaaaa;
+}
+
+#team .content-first .card{
+  margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+}
+
+#team .content-first .card:hover{
+  color: white;
+}
+
+#team .content-first .card .card-img-top{
+  position: relative;
+  overflow: hidden;
+}
+
+#team .content-first .card .social{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.85);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#team .content-first .card:hover .social{
+  opacity: 1;
+}
+
+#team .content-first .card .social a{
+  color: #222222;
+  margin: 0 10px;
+}
+
+#team .content-first .card .social a:hover{
+  color:var(--main-color-dis);
+}
+
+#team .content-first .card .social i{
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+/* #team .content-first .card .social .social-item{
+  color: red;
+} */
+
+/* #team .content-first .card:hover::before {
+  background-color: var(--main-color-dis);
+  color: white !important;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+} */
+
+
+
+/* #team .content-first .card:hover .fa.icon{
+  color: var(--main-color-dis);
+  background: white;
+} */
+
+

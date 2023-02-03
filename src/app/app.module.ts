@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollComponent } from './components/base/scroll/scroll.component';
 import { FeaturesComponent } from './components/main/features/features.component';
 import { TestimonialsComponent } from './components/main/testimonials/testimonials.component';
+import { TeamComponent } from './components/main/team/team.component';
+import { PortfolioComponent } from './components/main/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { TestimonialsComponent } from './components/main/testimonials/testimonia
     LoginComponent,
     ScrollComponent,
     FeaturesComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    TeamComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

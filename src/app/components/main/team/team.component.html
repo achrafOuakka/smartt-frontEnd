@@ -1,0 +1,33 @@
+<div id="team">
+  <div class="container-lg container-fluid ">
+    <div class="text-center animate__animated animate__fadeInUp animate__slower">
+      <div class="title-section">
+        <h2 class="text-uppercase">team</h2>
+        <p class="mt-3 mb-4 h6 text-muted"> Necessitatibus eius consequatur ex aliquid fuga eum quidem        </p>
+      </div>
+      <div class="content-first">
+        <div class="card-group text-center">
+          <ng-container *ngFor="let item of listTeam">
+            <div class="card mx-3 border-0 rounded-lg shadow">
+              <div class="card-img-top">
+                <img class="w-100" src="./assets/images/{{item.img}}" alt="Card image cap">
+                <div class="social">
+                  <a href="#"><i class="fa fa-twitter social-item" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-facebook-official social-item" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram social-item" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-linkedin-square social-item" aria-hidden="true"></i></a>
+                </div>
+              </div>
+
+
+              <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.text}}</p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

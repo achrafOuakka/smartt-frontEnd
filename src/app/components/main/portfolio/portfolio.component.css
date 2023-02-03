@@ -1,0 +1,76 @@
+#portfolio{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#portfolio .title-section h2{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+
+#portfolio .title-section h2::before, #portfolio .title-section h2::after {
+  content: '';
+  width: 50px;
+  height: 2.5px;
+  background: var(--main-color-dis);
+  display: inline-block;
+  margin: 10px;
+}
+
+#portfolio .fa.icon{
+font-size: 30px;
+background: var(--main-color-dis);
+color: white;
+padding: 10px 13px;
+border-radius: 50px;
+}
+
+
+#portfolio .content-first .card-group p{
+  line-height: 28px;
+  font-size: 16px;
+}
+
+#portfolio .content-first .card{
+  box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#portfolio .content-first .card::before {
+  content: '';
+  position: absolute;
+  background: #e1f0fa;
+  right: -60px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+#portfolio .content-first .card:hover{
+  color: white;
+}
+
+#portfolio .content-first .card:hover::before {
+  background-color: var(--main-color-dis);
+  color: white !important;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+
+
+#portfolio .content-first .card:hover .fa.icon{
+  color: var(--main-color-dis);
+  background: white;
+}
