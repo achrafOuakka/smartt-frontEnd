@@ -10,7 +10,7 @@
       <div class="content-first ">
         <div class="row">
           <ng-container *ngFor="let item of listPricing,let index = index">
-            <div class="col-lg-4">
+            <div class="col-lg-4 mt-3 animate__animated animate__slow animate__fadeInUp">
               <div class="box " [ngClass]="index == 1 ? 'recommended':''">
                 <h3>{{item.title}}</h3>
                 <h4>

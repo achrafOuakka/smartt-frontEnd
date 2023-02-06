@@ -8,7 +8,7 @@
       <div class="content-first">
         <div class="card-group text-center">
           <ng-container *ngFor="let item of listTeam">
-            <div class="card mx-3 border-0 rounded-lg shadow">
+            <div class="card mx-3 border-0 rounded-lg shadow animate__animated animate__slow animate__zoomIn">
               <div class="card-img-top">
                 <img class="w-100" src="./assets/images/{{item.img}}" alt="Card image cap">
                 <div class="social">
@@ -18,8 +18,6 @@
                   <a href="#"><i class="fa fa-linkedin-square social-item" aria-hidden="true"></i></a>
                 </div>
               </div>
-
-
               <div class="card-body">
                 <h5 class="card-title">{{item.title}}</h5>
                 <p class="card-text">{{item.text}}</p>

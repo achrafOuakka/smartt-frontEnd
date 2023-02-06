@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  listPortfolio : Array<{img: string, title : string, category:string}> = [];
+  listPortfolioProcess : Array<{img: string, title : string, category:string}> = [];
+  currentPortfolioFilter = "all";
+
+  listCategory : Array<string> = [];
   constructor() {
-    this.listPortfolio = [
+    this.listPortfolioProcess = [
       {img: 'portfolio-1.jpg', title : 'App 1', category:'app'},
       {img: 'portfolio-2.jpg', title : 'Web 3', category:'web'},
       {img: 'portfolio-3.jpg', title : 'App 2', category:'app'},
@@ -20,9 +23,15 @@ export class PortfolioComponent implements OnInit {
       {img: 'portfolio-8.jpg', title : 'Card 3', category:'card'},
       {img: 'portfolio-9.jpg', title : 'Web 1', category:'web'},
     ];
+
+    this.listCategory = ['all','app','web','card'];
   }
 
   ngOnInit(): void {
+  }
+
+  filterByCategory(category : string){
+    this.currentPortfolioFilter = category;
   }
 
 }

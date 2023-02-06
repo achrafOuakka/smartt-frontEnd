@@ -1,15 +1,26 @@
 <div id="portfolio">
   <div class="container-lg container-fluid ">
-    <div class="text-center animate__animated animate__fadeInUp animate__slower">
-      <div class="title-section">
+    <div class="text-center animate__animated animate__slow animate__fadeInUp">
+      <div class="title-section ">
         <h2 class="text-uppercase">PORTFOLIO</h2>
         <p class="mt-3 mb-4 h6 text-muted">Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
       </div>
-      <div class="content-first pb-5">
+      <div class="content-init animate__animated animate__slow animate__fadeInUp">
         <div class="row">
-          <ng-container *ngFor="let item of listPortfolio">
-            <div class="col-lg-4 col-md-6 ">
-              <div class="portfolio-item my-3">
+          <div class="col-12 d-flex justify-content-center">
+            <ul id="portfolio-filter">
+              <ng-container *ngFor="let item of listCategory">
+                <li (click)="filterByCategory(item)" class="text-capitalize" [ngClass]="currentPortfolioFilter == item ? 'portfolio-filter-active':''">{{item}}</li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content-first animate__animated animate__slow animate__fadeInUp">
+        <div class="row">
+          <ng-container *ngFor="let item of listPortfolioProcess">
+            <div class="col-lg-4 col-md-6 portfolio " [ngClass]="currentPortfolioFilter != 'all' && item.category != currentPortfolioFilter ? 'd-none':''">
+              <div class="portfolio-item my-3 animate__animated animate__zoomIn">
                 <img class="portfolio-img img-fluid"  src="./assets/images/{{item.img}}">
                 <div class="portfolio-info">
                   <h4>{{item.title}}</h4>
