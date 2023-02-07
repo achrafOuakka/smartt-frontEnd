@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "siteWeb-frontEnd": {
+    "smartt-frontEnd": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/siteWeb-frontEnd",
+            "outputPath": "dist/smartt-frontEnd",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -98,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "siteWeb-frontEnd:build:production"
+              "browserTarget": "smartt-frontEnd:build:production"
             },
             "development": {
-              "browserTarget": "siteWeb-frontEnd:build:development"
+              "browserTarget": "smartt-frontEnd:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -110,7 +110,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "siteWeb-frontEnd:build"
+            "browserTarget": "smartt-frontEnd:build"
           }
         },
         "test": {
@@ -133,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "siteWeb-frontEnd"
+  "defaultProject": "smartt-frontEnd"
 }

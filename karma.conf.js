@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/siteWeb-frontEnd'),
+      dir: require('path').join(__dirname, './coverage/smartt-frontEnd'),
       subdir: '.',
       reporters: [
         { type: 'html' },
