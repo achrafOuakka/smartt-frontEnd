@@ -1,4 +1,6 @@
+import { Card0 } from './../../../interfaces/card0';
 import { Component, OnInit } from '@angular/core';
+import { Title } from 'src/app/interfaces/title';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contact : {
+    title : Title,
+    card : {icon: string, text : string, listDetailsFeatures:Array<string>},
+    card1 : Card0,
+    map : string,
+  };
+
+  constructor() {
+
+    this.contact = {
+      title : {},
+      card : {icon: '', text : '', listDetailsFeatures:[]},
+      card1 : {},
+      map : '',
+    }
+
+  }
 
   ngOnInit(): void {
   }

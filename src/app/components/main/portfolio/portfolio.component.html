@@ -9,8 +9,8 @@
         <div class="row">
           <div class="col-12 d-flex justify-content-center">
             <ul id="portfolio-filter">
-              <ng-container *ngFor="let item of listCategory">
-                <li (click)="filterByCategory(item)" class="text-capitalize" [ngClass]="currentPortfolioFilter == item ? 'portfolio-filter-active':''">{{item}}</li>
+              <ng-container *ngFor="let item of listTag">
+                <li (click)="filterBytag(item)" class="text-capitalize" [ngClass]="currentTag == item ? 'portfolio-filter-active':''">{{item}}</li>
               </ng-container>
             </ul>
           </div>
@@ -19,14 +19,14 @@
       <div class="content-first animate__animated animate__slow animate__fadeInUp">
         <div class="row">
           <ng-container *ngFor="let item of listPortfolioProcess">
-            <div class="col-lg-4 col-md-6 portfolio " [ngClass]="currentPortfolioFilter != 'all' && item.category != currentPortfolioFilter ? 'd-none':''">
+            <div class="col-lg-4 col-md-6 portfolio " [ngClass]="currentTag != 'all' && item.tag != currentTag ? 'd-none':''">
               <div class="portfolio-item my-3 animate__animated animate__zoomIn">
-                <img class="portfolio-img img-fluid"  src="./assets/images/{{item.img}}">
+                <img class="portfolio-img img-fluid"  src="./assets/images/{{item.imgPath}}">
                 <div class="portfolio-info">
                   <h4>{{item.title}}</h4>
-                  <p class="text-uppercase">{{item.category}}</p>
+                  <p class="text-uppercase">{{item.tag}}</p>
                   <div class="portfolio-links">
-                    <a href="./assets/images/{{item.img}}" title="{{item.title}}">
+                    <a href="./assets/images/{{item.imgPath}}" title="{{item.title}}">
                       <i class="fa fa-plus" aria-hidden="true"></i>
                     </a>
                     <a href="#">

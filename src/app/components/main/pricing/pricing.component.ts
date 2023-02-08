@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from 'src/app/interfaces/title';
 
 @Component({
   selector: 'app-pricing',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricingComponent implements OnInit {
 
+  pricing : {title : Title,card?: Array<{title: string, prix : string, li_no:Array<number>}>};
+
   listPricing : Array<{title: string, prix : string, li_no:Array<number>}> = [];
-  listPricingItems : Array<any> = [];
+  listDetailsFeatures : Array<any> = [];
 
   constructor() {
     this.listPricing = [
@@ -16,7 +19,9 @@ export class PricingComponent implements OnInit {
       {title: 'Business', prix : '19', li_no:[4]},
       {title: 'Developer', prix : '29', li_no:[]},
     ];
-    this.listPricingItems = ['Aida dere','Nec feugiat nisl','Nulla at volutpat dola','Pharetra massa','Massa ultricies mi']
+    this.listDetailsFeatures = ['Aida dere','Nec feugiat nisl','Nulla at volutpat dola','Pharetra massa','Massa ultricies mi']
+
+    this.pricing = {title : {},card: this.listPricing};
   }
 
   ngOnInit(): void {

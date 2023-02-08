@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Card3 } from 'src/app/interfaces/card3';
+import { Title } from 'src/app/interfaces/title';
 
 @Component({
   selector: 'app-team',
@@ -6,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
-  listTeam : Array<{img: string, title : string, text:string}> = [];
+
+  team : {title : Title,card?: Array<Card3>};
+
+  listTeam : Array<Card3> = [];
   constructor() {
     this.listTeam = [
-      {img: 'team-1.jpg', title : 'Walter White', text:'Chief Executive Officer'},
-      {img: 'team-2.jpg', title : 'Sarah Jhonson', text:'Product Manager'},
-      {img: 'team-3.jpg', title : 'William Anderson', text:'CTO'},
-      {img: 'team-4.jpg', title : 'Amanda Jepson', text:'Accountant'},
+      {imgPath: 'team-1.jpg', fullName : 'Walter White', profile:'Chief Executive Officer'},
+      {imgPath: 'team-2.jpg', fullName : 'Sarah Jhonson', profile:'Product Manager'},
+      {imgPath: 'team-3.jpg', fullName : 'William Anderson', profile:'CTO'},
+      {imgPath: 'team-4.jpg', fullName : 'Amanda Jepson', profile:'Accountant'},
     ];
+    this.team = {title : {},card: []};
   }
 
   ngOnInit(): void {

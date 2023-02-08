@@ -10,7 +10,7 @@
           <ng-container *ngFor="let item of listTeam">
             <div class="card mx-3 border-0 rounded-lg shadow animate__animated animate__slow animate__zoomIn">
               <div class="card-img-top">
-                <img class="w-100" src="./assets/images/{{item.img}}" alt="Card image cap">
+                <img class="w-100" src="./assets/images/{{item.imgPath}}" alt="Card image cap">
                 <div class="social">
                   <a href="#"><i class="fa fa-twitter social-item" aria-hidden="true"></i></a>
                   <a href="#"><i class="fa fa-facebook-official social-item" aria-hidden="true"></i></a>
@@ -19,8 +19,8 @@
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title">{{item.title}}</h5>
-                <p class="card-text">{{item.text}}</p>
+                <h5 class="card-title">{{item.fullName}}</h5>
+                <p class="card-text">{{item.profile}}</p>
               </div>
             </div>
           </ng-container>

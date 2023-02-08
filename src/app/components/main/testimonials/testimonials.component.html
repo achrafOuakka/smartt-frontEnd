@@ -38,18 +38,18 @@
         <div class="carousel-inner">
           <ng-container *ngFor="let item of listProfile, let index = index">
             <div class="carousel-item " [ngClass]="index == 0 ? 'active' : ''">
-              <div class="row">
-                <div class="col-sm-6">
+              <div class="row d-flex justify-content-center">
+                <div class=" col-sm-6" >
                   <div class="testimonial-wrapper">
                     <div class="testimonial">
-                      {{item.objet[0].text}}
+                      {{item.objet[0].description}}
                     </div>
                     <div class="media">
-                      <img src="./assets/images/{{item.objet[0].img}}" class="mr-3" alt="">
+                      <img src="./assets/images/{{item.objet[0].imgPath}}" class="mr-3" alt="">
                       <div class="media-body">
                         <div class="overview">
-                          <div class="name"><b>{{item.objet[0].title}}</b></div>
-                          <div class="details">{{item.objet[0].subTitle}}</div>
+                          <div class="name"><b>{{item.objet[0].fullName}}</b></div>
+                          <div class="details">{{item.objet[0].profile}}</div>
                           <!-- <div class="star-rating">
                             <ul class="list-inline">
                               <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -64,17 +64,17 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div *ngIf="item.objet.length > 1" class="col-sm-6">
                   <div class="testimonial-wrapper">
                     <div class="testimonial">
-                      {{item.objet[1].text}}
+                      {{item.objet[1].description}}
                     </div>
                     <div class="media">
-                      <img src="./assets/images/{{item.objet[1].img}}" class="mr-3" alt="">
+                      <img src="./assets/images/{{item.objet[1].imgPath}}" class="mr-3" alt="">
                       <div class="media-body">
                         <div class="overview">
-                          <div class="name"><b>{{item.objet[1].title}}</b></div>
-                          <div class="details">{{item.objet[1].subTitle}}</div>
+                          <div class="name"><b>{{item.objet[1].fullName}}</b></div>
+                          <div class="details">{{item.objet[1].profile}}</div>
                           <!-- <div class="star-rating">
                             <ul class="list-inline">
                               <li class="list-inline-item"><i class="fa fa-star"></i></li>

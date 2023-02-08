@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from 'src/app/interfaces/title';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,31 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  listPortfolioProcess : Array<{img: string, title : string, category:string}> = [];
-  currentPortfolioFilter = "all";
+  portfolio: {title: Title,listPortfolioProcess : any,listTag: Array<string>};
 
-  listCategory : Array<string> = [];
+  title : Title ;
+  listPortfolioProcess : Array<{imgPath: string, title : string, tag:string,linkAccessDetails? : string,linkShowImage? : string }> = [];
+  currentTag = "all";
+
+  listTag : Array<string> = [];
   constructor() {
+    this.title = {};
     this.listPortfolioProcess = [
-      {img: 'portfolio-1.jpg', title : 'App 1', category:'app'},
-      {img: 'portfolio-2.jpg', title : 'Web 3', category:'web'},
-      {img: 'portfolio-3.jpg', title : 'App 2', category:'app'},
-      {img: 'portfolio-4.jpg', title : 'card 2', category:'card'},
-      {img: 'portfolio-5.jpg', title : 'Web 2', category:'web'},
-      {img: 'portfolio-6.jpg', title : 'App 3', category:'app'},
-      {img: 'portfolio-7.jpg', title : 'Card 1', category:'card'},
-      {img: 'portfolio-8.jpg', title : 'Card 3', category:'card'},
-      {img: 'portfolio-9.jpg', title : 'Web 1', category:'web'},
+      {imgPath: 'portfolio-1.jpg', title : 'App 1', tag:'app'},
+      {imgPath: 'portfolio-2.jpg', title : 'Web 3', tag:'web'},
+      {imgPath: 'portfolio-3.jpg', title : 'App 2', tag:'app'},
+      {imgPath: 'portfolio-4.jpg', title : 'card 2', tag:'card'},
+      {imgPath: 'portfolio-5.jpg', title : 'Web 2', tag:'web'},
+      {imgPath: 'portfolio-6.jpg', title : 'App 3', tag:'app'},
+      {imgPath: 'portfolio-7.jpg', title : 'Card 1', tag:'card'},
+      {imgPath: 'portfolio-8.jpg', title : 'Card 3', tag:'card'},
+      {imgPath: 'portfolio-9.jpg', title : 'Web 1', tag:'web'},
     ];
+    this.listTag = ['all','app','web','card'];
 
-    this.listCategory = ['all','app','web','card'];
+    this.portfolio = {title: this.title ,listPortfolioProcess : this.listPortfolioProcess,listTag: this.listTag};
   }
 
   ngOnInit(): void {
   }
 
-  filterByCategory(category : string){
-    this.currentPortfolioFilter = category;
+  filterBytag(tag : string){
+    this.currentTag = tag;
   }
 
 }

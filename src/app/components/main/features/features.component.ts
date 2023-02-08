@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Card0 } from 'src/app/interfaces/card0';
+import { Title } from 'src/app/interfaces/title';
 
 @Component({
   selector: 'app-features',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./features.component.css']
 })
 export class FeaturesComponent implements OnInit {
+
+  service: {title: Title,card: Array<{icon: string, colorIcon : string, text:string}>};
 
   listFeatues : Array<{icon: string, colorIcon : string, text:string}> = [];
 
@@ -24,6 +28,8 @@ export class FeaturesComponent implements OnInit {
       {icon: 'fa-signal', colorIcon : '#ff5828', text:'Verdo Park'},
       {icon: 'fa-hand-o-up ', colorIcon : '#29cc61', text:'Flavor Nivelanda'}
     ];
+
+    this.service = {title:{},card : []};
   }
 
   ngOnInit(): void {

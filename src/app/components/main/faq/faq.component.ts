@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from 'src/app/interfaces/title';
 
 @Component({
   selector: 'app-faq',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent implements OnInit {
+
+  faq : {title : Title,card?: Array<{icon: string, question : string, answer:Array<number>}>};
 
   listFaq : Array<{question: string, answer:string}> = [];
 
@@ -17,6 +20,9 @@ export class FaqComponent implements OnInit {
       {question: 'Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla ?', answer : 'Aperiam itaque sit optio et deleniti eos nihil quidem cumque. Voluptas dolorum accusantium sunt sit enim. Provident consequuntur quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda soluta sunt pariatur error doloribus fuga.'},
       {question: 'Tempus quam pellentesque nec nam aliquam sem et tortor consequat ?', answer : 'Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in'},
     ];
+
+    this.faq = {title:{},card: []};
+
   }
 
   ngOnInit(): void {

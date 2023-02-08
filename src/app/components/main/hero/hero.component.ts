@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
-  constructor() { }
+  here : {title:string, text:string, buttonText:string, imagePath:string };
+
+  constructor() {
+    this.here = {title:'string', text:'string', buttonText:'string', imagePath:'string' };
+   }
 
   ngOnInit(): void {
+
   }
 
 }

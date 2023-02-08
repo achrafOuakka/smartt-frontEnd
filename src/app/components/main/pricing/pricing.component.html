@@ -17,7 +17,7 @@
                   <sup>$</sup>{{item.prix}} <span>/month</span>
                 </h4>
                 <ul>
-                  <ng-container *ngFor="let itemPItems of listPricingItems,let indexItem = index">
+                  <ng-container *ngFor="let itemPItems of listDetailsFeatures,let indexItem = index">
                     <li [ngClass]="(item.li_no.indexOf(indexItem) > -1) ? 'no':''">{{itemPItems}}</li>
                   </ng-container>
                 </ul>
