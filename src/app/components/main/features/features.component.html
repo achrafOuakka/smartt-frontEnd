@@ -2,12 +2,12 @@
   <div class="container-lg container-fluid ">
     <div class="text-center animate__animated animate__fadeInUp animate__slower">
       <div class="title-section">
-        <h2 class="text-uppercase">{{features.title.title}}</h2>
-        <p class="mt-3 mb-4 h6 text-muted" *ngIf="features.title.subTitle">{{features.title.subTitle}}</p>
+        <h2 class="text-uppercase">{{features?.title?.title}}</h2>
+        <p class="mt-3 mb-4 h6 text-muted" *ngIf="features?.title?.subTitle">{{features?.title?.subTitle}}</p>
       </div>
       <div class="content-first animate__animated animate__fadeInUp animate__slower">
         <div class="row">
-          <ng-container *ngFor="let item of listFeatues">
+          <ng-container *ngFor="let item of features?.cards">
             <div class="col-lg-3 animate__animated animate__slow animate__fadeInUp">
               <div class="card my-2 border-0 rounded-sm shadow-none  text-left">
                 <div class="card-body">

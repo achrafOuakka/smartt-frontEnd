@@ -8,10 +8,10 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class PricingComponent implements OnInit {
 
-  pricing : {title : Title,card?: Array<{title: string, prix : string, li_no:Array<number>}>};
+  pricing : {title : Title,cards?: Array<{title: string, prix : string, li_no:Array<number>}>,listDetailsFeatures:Array<string>}| null = null;
 
   listPricing : Array<{title: string, prix : string, li_no:Array<number>}> = [];
-  listDetailsFeatures : Array<any> = [];
+  listDetailsFeatures : Array<string> = [];
 
   constructor() {
     this.listPricing = [
@@ -23,7 +23,8 @@ export class PricingComponent implements OnInit {
 
     this.pricing = {
       title : {title:'PRICING', subTitle:'Sit sint consectetur velit nemo qui impedit suscipit alias ea'},
-      card: this.listPricing};
+      cards: this.listPricing,
+      listDetailsFeatures:this.listDetailsFeatures};
   }
 
   ngOnInit(): void {

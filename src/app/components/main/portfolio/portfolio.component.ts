@@ -8,15 +8,16 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolio: {title: Title,listPortfolioProcess : any,listTag: Array<string>};
+  portfolio: {title: Title,listPortfolioProcess : any,listTag: Array<string>}| null = null;
 
-  title : Title ;
   listPortfolioProcess : Array<{imgPath: string, title : string, tag:string,linkAccessDetails? : string,linkShowImage? : string }> = [];
   currentTag = "all";
 
   listTag : Array<string> = [];
   constructor() {
-    this.title = {};
+  }
+
+  ngOnInit(): void {
     this.listPortfolioProcess = [
       {imgPath: 'portfolio-1.jpg', title : 'App 1', tag:'app'},
       {imgPath: 'portfolio-2.jpg', title : 'Web 3', tag:'web'},
@@ -34,9 +35,6 @@ export class PortfolioComponent implements OnInit {
       title: {title:'PORTFOLIO', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
       listPortfolioProcess : this.listPortfolioProcess,
       listTag: this.listTag};
-  }
-
-  ngOnInit(): void {
   }
 
   filterBytag(tag : string){

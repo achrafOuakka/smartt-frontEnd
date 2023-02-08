@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
     card : {icon: string, text : string, listDetailsFeatures:Array<string>},
     card1 : Card0,
     map : string,
-  };
+  }| null = null;
 
   constructor() {
 

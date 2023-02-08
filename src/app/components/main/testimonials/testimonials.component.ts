@@ -9,7 +9,7 @@ import { Card3 } from 'src/app/interfaces/card3';
 })
 export class TestimonialsComponent implements OnInit {
 
-  testimonials : {title : Title,card?: Array<{objet:Array<Card3>}>};
+  testimonials : {title : Title,cards : Array<{objet:Array<Card3>}>}| null = null;
 
   listProfile : Array<{objet:Array<Card3>}> = [];
   lenghtListProfile = 0;
@@ -38,7 +38,7 @@ export class TestimonialsComponent implements OnInit {
 
       this.testimonials = {
         title : {title:'TESTIMONIALS', subTitle:'Magnam dolores commodi suscipit eum quidem consectetur velit:'},
-        card: this.listProfile};
+        cards: this.listProfile};
 
       console.log(this.lenghtListProfile)
   }

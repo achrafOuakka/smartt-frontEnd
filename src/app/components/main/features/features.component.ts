@@ -9,11 +9,16 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class FeaturesComponent implements OnInit {
 
-  features: {title: Title,card: Array<{icon: string, colorIcon : string, text:string}>};
+  features: {title: Title,cards: Array<{icon: string, colorIcon : string, text:string}>}| null = null;
 
   listFeatues : Array<{icon: string, colorIcon : string, text:string}> = [];
 
   constructor() {
+
+  }
+
+  ngOnInit(): void {
+
     this.listFeatues = [
       {icon: 'fa-archive', colorIcon : '#ffbb2c', text:'Lorem Ipsum'},
       {icon: 'fa-bar-chart ', colorIcon : '#5578ff', text:'Dolor Sitema'},
@@ -31,10 +36,7 @@ export class FeaturesComponent implements OnInit {
 
     this.features = {
       title:{title:'Features', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
-      card : []};
-  }
-
-  ngOnInit(): void {
+      cards : this.listFeatues};
   }
 
 }

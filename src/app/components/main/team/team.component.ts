@@ -9,7 +9,7 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class TeamComponent implements OnInit {
 
-  team : {title : Title,card?: Array<Card3>};
+  team : {title : Title,cards?: Array<Card3>}| null = null;
 
   listTeam : Array<Card3> = [];
   constructor() {
@@ -21,7 +21,7 @@ export class TeamComponent implements OnInit {
     ];
     this.team = {
       title : {title:'team', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
-      card: []};
+      cards: this.listTeam};
   }
 
   ngOnInit(): void {

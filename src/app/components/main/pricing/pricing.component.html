@@ -2,14 +2,14 @@
   <div class="container-lg container-fluid ">
     <div class="text-center animate__animated animate__fadeInUp animate__slower">
       <div class="title-section">
-        <h2 class="text-uppercase">{{pricing.title.title}}</h2>
-        <p class="mt-3 mb-4 h6 text-muted" *ngIf="pricing.title.subTitle">
-          {{pricing.title.subTitle}}
+        <h2 class="text-uppercase">{{pricing?.title?.title}}</h2>
+        <p class="mt-3 mb-4 h6 text-muted" *ngIf="pricing?.title?.subTitle">
+          {{pricing?.title?.subTitle}}
         </p>
       </div>
       <div class="content-first ">
         <div class="row">
-          <ng-container *ngFor="let item of listPricing,let index = index">
+          <ng-container *ngFor="let item of pricing?.cards,let index = index">
             <div class="col-lg-4 mt-3 animate__animated animate__slow animate__fadeInUp">
               <div class="box " [ngClass]="index == 1 ? 'recommended':''">
                 <h3>{{item.title}}</h3>
@@ -17,7 +17,7 @@
                   <sup>$</sup>{{item.prix}} <span>/month</span>
                 </h4>
                 <ul>
-                  <ng-container *ngFor="let itemPItems of listDetailsFeatures,let indexItem = index">
+                  <ng-container *ngFor="let itemPItems of pricing?.listDetailsFeatures,let indexItem = index">
                     <li [ngClass]="(item.li_no.indexOf(indexItem) > -1) ? 'no':''">{{itemPItems}}</li>
                   </ng-container>
                 </ul>

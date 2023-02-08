@@ -19,22 +19,23 @@
   margin: 10px;
 }
 
+#about  p,
 #about  p{
   line-height: 28px;
   font-size: 16px;
 }
 
-#about .content-first ul {
+#about .content-first .textLeft ul {
   list-style-type: none;
   padding-left: 0px;
 }
 
-#about .content-first ul li {
+#about .content-first .textLeft ul li {
   margin-top: 10px;
   padding-left: 28px;
 }
 
-#about .content-first ul i {
+#about .content-first .textLeft ul i {
 color: var(--main-color-dis);
 }
 
