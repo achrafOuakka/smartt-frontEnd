@@ -2,7 +2,8 @@
   <div class="container-lg container-fluid ">
     <div class="text-center animate__animated animate__fadeInUp animate__slower">
       <div class="title-section pb-5">
-        <h2 class="text-uppercase">FREQUENTLY ASKED QUESTIONS</h2>
+        <h2 class="text-uppercase">{{faq?.title?.title}}</h2>
+        <p class="mt-3 mb-4 h6 text-muted" *ngIf="faq?.title?.subTitle">{{faq?.title?.subTitle}}</p>
       </div>
       <div class="content-first text-left">
         <ng-container *ngFor="let item of listFaq">

@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   constructor() {
 
     this.contact = {
-      title : {},
+      title : {title:'NOUS CONTACTER', subTitle:''},
       card : {icon: '', text : '', listDetailsFeatures:[]},
       card1 : {},
       map : '',

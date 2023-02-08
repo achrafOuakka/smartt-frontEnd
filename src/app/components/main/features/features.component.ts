@@ -9,7 +9,7 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class FeaturesComponent implements OnInit {
 
-  service: {title: Title,card: Array<{icon: string, colorIcon : string, text:string}>};
+  features: {title: Title,card: Array<{icon: string, colorIcon : string, text:string}>};
 
   listFeatues : Array<{icon: string, colorIcon : string, text:string}> = [];
 
@@ -29,7 +29,9 @@ export class FeaturesComponent implements OnInit {
       {icon: 'fa-hand-o-up ', colorIcon : '#29cc61', text:'Flavor Nivelanda'}
     ];
 
-    this.service = {title:{},card : []};
+    this.features = {
+      title:{title:'Features', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
+      card : []};
   }
 
   ngOnInit(): void {

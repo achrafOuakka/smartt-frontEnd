@@ -14,7 +14,11 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.about = { title: {}, buttonText:'string', imagePath:'string', card : {}}
+    this.about = {
+      title: {title:'QUI SOMMES NOUS?', subTitle:''},
+      buttonText:'string',
+      imagePath:'string',
+      card : {}}
   }
 
 }

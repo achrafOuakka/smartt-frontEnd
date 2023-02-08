@@ -2,8 +2,8 @@
   <div class="container-lg container-fluid ">
     <div class="text-center animate__animated animate__slow animate__fadeInUp">
       <div class="title-section ">
-        <h2 class="text-uppercase">PORTFOLIO</h2>
-        <p class="mt-3 mb-4 h6 text-muted">Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+        <h2 class="text-uppercase">{{portfolio?.title?.title}}</h2>
+        <p class="mt-3 mb-4 h6 text-muted" *ngIf="portfolio?.title?.subTitle">{{portfolio?.title?.subTitle}}</p>
       </div>
       <div class="content-init animate__animated animate__slow animate__fadeInUp">
         <div class="row">

@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
-  here : {title:string, text:string, buttonText:string, imagePath:string };
+  hero : {title:string, text:string, buttonText:string, imgPath:string };
 
   constructor() {
-    this.here = {title:'string', text:'string', buttonText:'string', imagePath:'string' };
+    this.hero = {
+     title:'Guider votre transformation digitale',
+     text:'Nos expertises tech pour construire votre business de demain',
+     buttonText:'En savoir plus',
+     imgPath:'./assets/images/hero-002.png' };
    }
 
   ngOnInit(): void {

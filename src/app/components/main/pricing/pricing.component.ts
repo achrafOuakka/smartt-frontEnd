@@ -21,7 +21,9 @@ export class PricingComponent implements OnInit {
     ];
     this.listDetailsFeatures = ['Aida dere','Nec feugiat nisl','Nulla at volutpat dola','Pharetra massa','Massa ultricies mi']
 
-    this.pricing = {title : {},card: this.listPricing};
+    this.pricing = {
+      title : {title:'PRICING', subTitle:'Sit sint consectetur velit nemo qui impedit suscipit alias ea'},
+      card: this.listPricing};
   }
 
   ngOnInit(): void {

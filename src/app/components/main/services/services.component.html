@@ -2,8 +2,8 @@
   <div class="container-lg container-fluid ">
     <div class="text-center animate__animated animate__fadeInUp animate__slower">
       <div class="title-section">
-        <h2 class="text-uppercase">SERVICES</h2>
-        <p class="mt-3 mb-4 h6 text-muted">Nos services:</p>
+        <h2 class="text-uppercase">{{services?.title?.title}}</h2>
+        <p class="mt-3 mb-4 h6 text-muted" *ngIf="services?.title?.subTitle">{{services?.title?.subTitle}}</p>
       </div>
       <div class="content-first pb-5">
         <div class="card-group text-left">

@@ -2,15 +2,15 @@
 <div class="container-lg container-fluid">
   <div class="row ">
     <div class="col-lg-6 order-2 order-lg-1 ">
-        <h1 class="mt-3 animate__animated animate__slow animate__fadeInUp">Guider votre transformation digitale</h1>
-        <h4 class=" my-4 color-dark animate__animated animate__slow animate__fadeInUp">Nos expertises tech pour construire votre business de demain</h4>
+        <h1 class="mt-3 animate__animated animate__slow animate__fadeInUp">{{hero?.title}}</h1>
+        <h4 class=" my-4 color-dark animate__animated animate__slow animate__fadeInUp">{{hero?.text}}</h4>
         <div class="pt-5 animate__animated animate__slow animate__fadeInUp">
-          <a class="learnMore" href="#about">En savoir plus</a>
+          <a class="learnMore" href="#about">{{hero?.buttonText}}</a>
         </div>
     </div>
 
     <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-center animate__animated animate__zoomIn">
-        <img class="hero-img  animate__animated animate__shakeY animate__slower__max animate__infinite infinite"   id="hero-image" src="./assets/images/hero-002.png" alt="logo"  >
+        <img class="hero-img  animate__animated animate__shakeY animate__slower__max animate__infinite infinite"   id="hero-image" src="{{hero?.imgPath}}" alt="logo"  >
     </div>
   </div>
 </div>

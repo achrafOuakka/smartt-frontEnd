@@ -36,7 +36,9 @@ export class TestimonialsComponent implements OnInit {
 
       this.lenghtListProfile = this.listProfile.length;
 
-      this.testimonials = {title : {},card: this.listProfile};
+      this.testimonials = {
+        title : {title:'TESTIMONIALS', subTitle:'Magnam dolores commodi suscipit eum quidem consectetur velit:'},
+        card: this.listProfile};
 
       console.log(this.lenghtListProfile)
   }

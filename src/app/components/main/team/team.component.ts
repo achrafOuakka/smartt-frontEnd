@@ -19,7 +19,9 @@ export class TeamComponent implements OnInit {
       {imgPath: 'team-3.jpg', fullName : 'William Anderson', profile:'CTO'},
       {imgPath: 'team-4.jpg', fullName : 'Amanda Jepson', profile:'Accountant'},
     ];
-    this.team = {title : {},card: []};
+    this.team = {
+      title : {title:'team', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
+      card: []};
   }
 
   ngOnInit(): void {

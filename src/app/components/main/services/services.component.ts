@@ -9,11 +9,13 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class ServicesComponent implements OnInit {
 
-  service: {title: Title,card0 : Array<Card0>,card1: Array<{imgPath: string, title : string, text:string,link? : string }>};
+  services: {title: Title,card0 : Array<Card0>,card1: Array<{imgPath: string, title : string, text:string,link? : string }>};
 
   constructor() {
 
-    this.service= {title: {},card0 : [],card1: []};
+    this.services= {
+      title: {title:'SERVICES', subTitle:'Nos services:'},
+      card0 : [],card1: []};
 
   }
 

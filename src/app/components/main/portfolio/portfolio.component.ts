@@ -30,7 +30,10 @@ export class PortfolioComponent implements OnInit {
     ];
     this.listTag = ['all','app','web','card'];
 
-    this.portfolio = {title: this.title ,listPortfolioProcess : this.listPortfolioProcess,listTag: this.listTag};
+    this.portfolio = {
+      title: {title:'PORTFOLIO', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
+      listPortfolioProcess : this.listPortfolioProcess,
+      listTag: this.listTag};
   }
 
   ngOnInit(): void {

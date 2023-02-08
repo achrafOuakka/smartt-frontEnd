@@ -2,8 +2,8 @@
   <div *ngIf="lenghtListProfile != 0 && listProfile" class="container-lg  container-fluid ">
     <div class="text-left animate__animated animate__fadeInUp animate__slower">
       <div class="title-section text-center">
-        <h2 class="text-uppercase">TESTIMONIALS</h2>
-        <p class="mt-3 mb-4 h6 text-muted">Magnam dolores commodi suscipit eum quidem consectetur velit:</p>
+        <h2 class="text-uppercase">{{testimonials?.title?.title}}</h2>
+        <p class="mt-3 mb-4 h6 text-muted" *ngIf="testimonials?.title?.subTitle">{{testimonials?.title?.subTitle}}</p>
       </div>
       <div id="myCarousel" class="carousel slide animate__animated animate__slow animate__fadeInUp" data-ride="carousel">
         <!-- Carousel indicators -->

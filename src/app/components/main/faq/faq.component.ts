@@ -21,7 +21,9 @@ export class FaqComponent implements OnInit {
       {question: 'Tempus quam pellentesque nec nam aliquam sem et tortor consequat ?', answer : 'Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in'},
     ];
 
-    this.faq = {title:{},card: []};
+    this.faq = {
+      title:{title:'FREQUENTLY ASKED QUESTIONS', subTitle:''},
+      card: []};
 
   }
 
