@@ -64,13 +64,15 @@
 }
 
 
-#contact .gmap_canvas {
+#contact #gmap_canvas {
   overflow:hidden;
   background:none!important;
+  width: 450px !important;
+  height: 300px !important;
 }
 
-#contact .gmap_canvas iframe{
+#contact #gmap_canvas iframe{
   border:0;
-   width: 450px;
-   height: 300px
+  width: 450px !important;
+  height: 300px !important;
 }

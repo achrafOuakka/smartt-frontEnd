@@ -19,6 +19,7 @@ import { TeamComponent } from './components/main/team/team.component';
 import { PortfolioComponent } from './components/main/portfolio/portfolio.component';
 import { PricingComponent } from './components/main/pricing/pricing.component';
 import { FaqComponent } from './components/main/faq/faq.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FaqComponent } from './components/main/faq/faq.component';
     TeamComponent,
     PortfolioComponent,
     PricingComponent,
-    FaqComponent
+    FaqComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
