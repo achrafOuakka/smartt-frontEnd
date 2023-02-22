@@ -18,7 +18,7 @@
       </div>
       <div class="content-first animate__animated animate__slow animate__fadeInUp">
         <div class="row">
-          <ng-container *ngFor="let item of portfolio?.listPortfolioProcess">
+          <ng-container *ngFor="let item of portfolio?.cards">
             <div class="col-lg-4 col-md-6 portfolio " [ngClass]="currentTag != 'all' && item.tag != currentTag ? 'd-none':''">
               <div class="portfolio-item my-3 animate__animated animate__zoomIn">
                 <img class="portfolio-img img-fluid"  src="./assets/images/{{item.imgPath}}">

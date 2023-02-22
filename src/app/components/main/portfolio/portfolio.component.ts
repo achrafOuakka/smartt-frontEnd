@@ -8,9 +8,9 @@ import { Title } from 'src/app/interfaces/title';
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolio: {title: Title,listPortfolioProcess : any,listTag: Array<string>}| null = null;
+  portfolio: {title: Title,cards : any,listTag: Array<string>}| null = null;
 
-  listPortfolioProcess : Array<{imgPath: string, title : string, tag:string,linkAccessDetails? : string,linkShowImage? : string }> = [];
+  listPortfolio : Array<{imgPath: string, title : string, tag:string,linkAccessDetails? : string,linkShowImage? : string }> = [];
   currentTag = "all";
 
   listTag : Array<string> = [];
@@ -18,7 +18,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listPortfolioProcess = [
+    this.listPortfolio = [
       {imgPath: 'portfolio-1.jpg', title : 'App 1', tag:'app'},
       {imgPath: 'portfolio-2.jpg', title : 'Web 3', tag:'web'},
       {imgPath: 'portfolio-3.jpg', title : 'App 2', tag:'app'},
@@ -33,7 +33,7 @@ export class PortfolioComponent implements OnInit {
 
     this.portfolio = {
       title: {title:'PORTFOLIO', subTitle:'Necessitatibus eius consequatur ex aliquid fuga eum quidem'},
-      listPortfolioProcess : this.listPortfolioProcess,
+      cards : this.listPortfolio,
       listTag: this.listTag};
   }
 

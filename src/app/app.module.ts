@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {  HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/base/header/header.component';
 import { LayoutComponent } from './components/base/layout/layout.component';
@@ -44,6 +44,7 @@ import { SafePipe } from './pipes/safe.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,//pour ngForms
     ReactiveFormsModule,
   ],

@@ -18,7 +18,8 @@
   margin: 10px;
 }
 
-#contact  p{
+#contact .info-first p,
+#contact .info-second p{
   line-height: 28px;
   font-size: 16px;
 }
@@ -39,25 +40,21 @@
 }
 
 
-#contact .info .icon-first,
-#contact .info .icon-last {
+#contact .info-second .icon-first,
+#contact .info-second .icon-last {
   color: var(--main-color-dis);
   font-size: 30px;
 }
 
-#contact .info .icon-last {
+#contact .info-second .icon-last {
   font-size: 25px;
 }
 
 
-#contact .info p {
+#contact .info-second p {
   display:inline;
-
 }
 
-#contact .map{
-  width:100%;
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (max-width: 992px) {
@@ -69,10 +66,13 @@
   background:none!important;
   width: 450px !important;
   height: 300px !important;
+  display: flex;
+  justify-content: end;
 }
 
 #contact #gmap_canvas iframe{
   border:0;
   width: 450px !important;
   height: 300px !important;
+
 }

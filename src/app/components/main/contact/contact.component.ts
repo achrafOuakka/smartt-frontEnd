@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
 
   contact : {
     title : Title,
-    card : {title: string, text : string, listDetailsFeatures:Array<{icon : string,link:string}>},
+    card : {title: string, text : string, listSocial:Array<{icon : string,link:string}>},
     cards1 : Array<Card0>,
     map : string,
   }| null = null;
@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    let listDetailsFeatures= [
+    let listSocial= [
       {icon :'fa-twitter' ,link:'https://www.twitter.com/'},
       {icon :'fa-facebook' ,link:'https://www.facebook.com/'},
       {icon :'fa-instagram' ,link:'https://www.instagram.com/'},
@@ -29,8 +29,8 @@ export class ContactComponent implements OnInit {
       title : {title:'NOUS CONTACTER', subTitle:''},
       card : {
         title: 'Onesyly Consulting',
-        text : '<p>Consulting et accompagnement de projets grâce à nos expertises tech & innovation. </p>   <p>Nous vous aidons à réussir votre transformation digitale.</p>',
-        listDetailsFeatures: listDetailsFeatures},
+        text : '<p>Consulting et accompagnement de projets gr&acirc;ce &agrave; nos expertises tech &amp; innovation.</p><p>Nous vous aidons &agrave; r&eacute;ussir votre transformation digitale.</p>',
+        listSocial: listSocial},
       cards1 : [
         {icon:'fa-map-marker',title:' Onesyly Consulting 10 rue de Penthièvre 75008, Paris'},
         {icon:'fa-envelope',title:'contact@onesyly.com'},
